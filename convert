@@ -7,18 +7,11 @@ body, html {
   height: 100%;
 }
 
-.acc1 {
+.heart32 {
   position: absolute;
-  left: 1172px;
-  top: 1px;
-  font-size: 23px;
-}
-
-.trophytxt {
-  color: #F2BD27;
-  position: absolute;
-  top: 189px;
-  left: 969px;
+  top: 190px;
+  width: 900px;
+  left: 440px;
 }
 
 .greenfntxt {
@@ -26,7 +19,7 @@ body, html {
   position: absolute;
   top: 190px;
   width: 900px;
-  left: 540px;
+  left: 440px;
 }
 
 .uploadedProject {
@@ -2509,4 +2502,4 @@ swiper-slide {
   top: 15px;
 }
 
-/*# sourceMappingURL=converted.css.map */
+/*# sourceMappingURL=convert.map */

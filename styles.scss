@@ -14,6 +14,11 @@ $C13: #E0282E;
 $C14: #F4801A;
 $C15: #F2BD27;
 $C16: #9E339F;
+$C17: #FFC247;
+$C18: #623B20;
+
+
+
 
 @font-face {
     font-family: Helvetica Neue;
@@ -24,36 +29,102 @@ body, html {
     width: 100%;
     height: 100%;
 }
-
-.header {
-    background-color: $C1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 16px;
-    gap: 8px;
-    width: 100%;
-    height: 70px;
+.acc1{
+    position: absolute;
+  left: 1172px;
+  top: 1px;
+  font-size: 23px;
+}
+.trophytxt{
+    color: $C15;
+    position: absolute;
+    top: 189px;
+  left: 969px;
+}
+.greenfntxt{
+color: $C9;
+position: absolute;
+top: 190px;
+width: 900px;
+left: 540px;
 }
 
-.text1 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
+.uploadedProject{
+    background-color: $C1;
+    height: 240px;
+    width: 89%;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+.cnt34{
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: $C2;
-    margin: 0px 8px;
-    text-decoration: none;
+    z-index: 4;
+    overflow: hidden;
 }
-.texthead1 {
+.vidPro{
+    height: 210px;
+    width: 400px;
+    border-radius: 6px;
+    margin-left: 20px;
+    z-index: 2;
+}
+.LineBg{
+    border: #1677FF 1px solid;
+    width: 89%;
+    align-items: center;
+   display: flex;
+   justify-content: center;
+   align-self: center;
+   margin-left: 6%;
+}
+.cnt37{
+   background-color:$C8 ; 
+   align-items: center;
+   display: flex;
+   justify-content: center;
+ 
+}
+.rothchild{
+    background-color: #272b30;
+}
+.txt18{
+    background-color: #1677FF;
+    padding: 5px;
+    color: white;
+    border-radius: 6px;
+}
+.cnt116{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+.blueBanner{
+    display: flex;
+    justify-content: flex-start;
+    background-color: $C11;
+    color: white;
+    padding: 23px 0;
+    width: 87%;
+   border-radius: 6px;
+   
+    
+}
+.bluebtxt{
+    font-size: 18px;
+    padding-right: 19px;
+}
+.txtTopbar1 {
     width: 100%;
 }
-.header2 {
+
+.Topbarer2 {
     width: 100%;
     height: 600px;
     background: url(car.jpg);
@@ -93,7 +164,7 @@ body, html {
     background: $C4;
     border-radius: 8px;
 }
-.text2 {
+.txt2 {
     width: 401px;
     height: 80px;
     font-family: 'Roboto';
@@ -103,7 +174,7 @@ body, html {
     line-height: 42px;
     color: $C6;
 }
-.text3 {
+.txt3 {
     width: 291px;
     height: 42px;
     font-family: 'Roboto';
@@ -114,7 +185,7 @@ body, html {
     color: $C2;
     margin-top: 45px;
 }
-.text4 {
+.txt4 {
     height: 14px;
     font-family: 'Roboto';
     font-style: normal;
@@ -125,7 +196,7 @@ body, html {
     display: flex;
     justify-content: center;
 }
-.header3 {
+.Topbarer3 {
     margin-top: 24px;
     width: 100%;
 }
@@ -134,14 +205,14 @@ body, html {
     height: 0px;
     border: 0.5px solid $C7;
 }
-.img2 {
+.pic2 {
     width: 80px;
     height: 15px;
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
-.text5 {
+.txt5 {
     width: 55px;
     height: 14px;
     font-family: 'Roboto';
@@ -168,7 +239,7 @@ body, html {
     border-radius: 4px;
     margin-top: 37px;
 }
-.text6 {
+.txt6 {
     width: 43px;
     height: 16px;
     font-family: 'Roboto';
@@ -191,7 +262,21 @@ body, html {
     margin-left: 16px;
     margin-top: 37px;
 }
-.text7 {
+.txt1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $C2;
+    margin: 0px 8px;
+    text-decoration: none;
+}
+.txt7 {
     width: 35px;
     height: 16px;
     font-family: 'Roboto';
@@ -201,7 +286,7 @@ body, html {
     line-height: 16px;
     color: $C5;
 }
-.img5 {
+.pic5 {
     border-radius: 8px;
     width: 116.67px;
     height: 70px;
@@ -253,16 +338,16 @@ body, html {
     position: relative;
     left: 0.7px;
 }
-.img6 {
+.pic6 {
     border-radius: 8px;
     width: 116.67px;
     height: 70px;
     margin-right: 8px;
 }
-.header5 {
+.Topbarer5 {
     margin-right: 20px;
 }
-.text8 {
+.txt8 {
     color: $C5;
     font-family: 'Roboto';
     font-style: normal;
@@ -270,7 +355,17 @@ body, html {
     font-size: 10px;
     line-height: 12px;
 }
-.text9 {
+.Topbarer {
+    background-color: $C1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 8px;
+    width: 100%;
+    height: 70px;
+}
+.txt9 {
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 700;
@@ -280,7 +375,7 @@ body, html {
     margin-top: 69px;
     color: $C6
 }
-.text10 {
+.txt10 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -310,7 +405,7 @@ body, html {
     font-size: 14px;
     color: $C5;
 }
-.mainheader1 {
+.mainTopbarer1 {
     background-color: $C8;
 }
 .spacer {
@@ -330,7 +425,7 @@ body, html {
 .a3 {
     margin-right: 10px;
 }
-.img7 {
+.pic7 {
     width: 408px;
     height: 313px;
 }
@@ -347,7 +442,7 @@ body, html {
     padding: 0px;
     gap: 24px;
 }
-.img8 {
+.pic8 {
     width: 100%;
 }
 .image10 {
@@ -359,10 +454,10 @@ body, html {
 .footer1 {
     background-color: $C1;
 }
-.img11 {
+.pic11 {
     margin-right: 12px;
 }
-.text11 {
+.txt11 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -371,7 +466,7 @@ body, html {
     color: $C6;
     margin-top: 32px;
 }
-.text12 {
+.txt12 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -380,7 +475,7 @@ body, html {
     color: $C2;
     margin-top: 8px;
 }
-.text13 {
+.txt13 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -403,7 +498,7 @@ body, html {
 .spacer5 {
     margin-left: 22px;
 }
-.mainheader2 {
+.mainTopbarer2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -411,10 +506,10 @@ body, html {
     background-color: $C1;
     width: 200px;
 }
-.header10 {
+.Topbarer10 {
     background-color: $C8;
 }
-.mtext1 {
+.mtxt1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -424,7 +519,7 @@ body, html {
     margin-top: 7px;
     margin-bottom: 15px;
 }
-.img9 {
+.pic9 {
     margin-left: 12px;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -433,14 +528,14 @@ body, html {
     margin-left: 12px;
     cursor: pointer;
 }
-.stext1 {
+.stxt1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     color: $C6
 }
-.img10 {
+.pic10 {
     margin-left: 8px;
     width: 8px;
     height: 8px;
@@ -481,7 +576,7 @@ body, html {
 .checkmark1 input:checked ~ .checkmark:after {
     display: block;
 }
-.header11 {
+.Topbarer11 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -595,10 +690,10 @@ body, html {
 .dropdown-content {
     width: 100%;
 }
-.header12 {
+.Topbarer12 {
     width: 50%;
 }
-.header13 {
+.Topbarer13 {
     width: 100%;
 }
 .carbg {
@@ -612,7 +707,7 @@ body, html {
     background-position: center center;
     border-radius: 8px 8px 0px 0px;
 }
-.frametext1 {
+.frametxt1 {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -624,7 +719,7 @@ body, html {
     margin-left: 16px;
     width: 50%;
 }
-.frametext1alt {
+.frametxt1alt {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -635,7 +730,7 @@ body, html {
     margin-top: 4px;
     margin-left: 16px;
 }
-.ftext1 {
+.ftxt1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -663,7 +758,7 @@ body, html {
     margin-left: 16px;
     margin-top: 16px;
 }
-.frametext2 {
+.frametxt2 {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -677,14 +772,14 @@ body, html {
     margin-left: 16px;
     margin-bottom: 30px;
 }
-.ftext2 {
+.ftxt2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     color: $C6;
 }
-.ftext3 {
+.ftxt3 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -709,7 +804,7 @@ body, html {
     padding: 8px 8px;
     background: $C12;
 }
-.header4 {
+.Topbarer4 {
     width: 100%;
 }
 .button12 {
@@ -727,17 +822,17 @@ body, html {
     border-radius: 4px;
     margin-left: 4px;
 }
-.header15 {
+.Topbarer15 {
     width: 15%;
     margin-top: 5px;
 }
-.header16 {
+.Topbarer16 {
     width: 28%;
 }
-.header17 {
+.Topbarer17 {
     width: 10%;
 }
-.header18 {
+.Topbarer18 {
     width: 100%;
 }
 .btn12 {
@@ -803,7 +898,7 @@ body, html {
     background-position: center center;
     border-radius: 8px 8px 0px 0px;
 }
-.frametext4 {
+.frametxt4 {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -818,16 +913,16 @@ body, html {
     margin-bottom: 16px;
     width: 314px;
 }
-.header17 {
+.Topbarer17 {
     width: 70px;
 }
 .button16 {
     width: 14%;
 }
-.header19 {
+.Topbarer19 {
     width: 15%;
 }
-.header20 {
+.Topbarer20 {
     width: 10%;
     margin-right: 25px;
 }
@@ -847,10 +942,10 @@ body, html {
     border-radius: 4px;
     margin-left: 4px;
 }
-.header21 {
+.Topbarer21 {
     width: 250%;
 }
-.frametext5 {
+.frametxt5 {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -904,13 +999,13 @@ body, html {
     background: #5A54F9;
     border-radius: 4px;
 }
-.header25 {
+.Topbarer25 {
     width: 15%;
 }
 .fullsize {
     width: 100%;
 }
-.header26 {
+.Topbarer26 {
     width: 72%;
 }
 .margin1 {
@@ -934,11 +1029,11 @@ body, html {
 .spacer61 {
     height: 60px;
 }
-.finaltext {
+.finaltxt {
     margin-top: 10px;
     margin-bottom: 15px;
 }
-.frametext14 {
+.frametxt14 {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -950,7 +1045,7 @@ body, html {
     margin-left: 16px;
     margin-bottom: 54px;
 }
-.frametext15 {
+.frametxt15 {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -962,7 +1057,7 @@ body, html {
     margin-left: 16px;
     margin-bottom: 52px;
 }
-.img21 {
+.pic21 {
     margin-right: 38px;
     width: 100%;
     height: 100%;
@@ -1037,7 +1132,7 @@ body, html {
     width: 32px;
     height: 32px;
 }
-.mainheader51 {
+.mainTopbarer51 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1057,7 +1152,7 @@ body, html {
 .maxwidth123 {
     width: 100%;
 }
-.texth1 {
+.txth1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -1066,7 +1161,7 @@ body, html {
     color: $C6;
     margin-left: 8px;
 }
-.texth2 {
+.txth2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -1130,7 +1225,7 @@ body, html {
     border-radius: 4px;
     margin-right: 55px;
 }
-.ftext33 {
+.ftxt33 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -1138,7 +1233,7 @@ body, html {
     width: 100%;
     color: $C6;
 }
-.texth3 {
+.txth3 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -1147,7 +1242,7 @@ body, html {
     color: $C6;
     margin-left: 8px;
 }
-.mainheader52 {
+.mainTopbarer52 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1177,7 +1272,7 @@ body, html {
     justify-content: center;
     align-items: center;
 }
-.textb1 {
+.txtb1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -1187,7 +1282,7 @@ body, html {
     color: $C6;
     margin-left: 8px;
 }
-.textb2 {
+.txtb2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -1195,7 +1290,7 @@ body, html {
     color: $C2;
     margin-left: 8px;
 }
-.textb3 {
+.txtb3 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -1316,7 +1411,7 @@ body, html {
     margin-bottom: 16px;
     margin-left: 16px;
 }
-.imgavatar {
+.picavatar {
     margin-right: 4px;
 }
 .background4 {
@@ -1397,7 +1492,7 @@ body, html {
     color: $C5;
     margin-left: 16px;
 }
-.mainheader59 {
+.mainTopbarer59 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1406,7 +1501,7 @@ body, html {
     background: $C1;
     border-radius: 8px;
 }
-.textb6 {
+.txtb6 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -1416,7 +1511,7 @@ body, html {
     margin-left: 24px;
     margin-bottom: 11px;
 }
-.textb7 {
+.txtb7 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -1426,14 +1521,14 @@ body, html {
     margin-left: 24px;
     margin-top: 12px;
 }
-.img51 {
+.pic51 {
     margin-right: 11px;
     margin-left: 2px;
 }
-.img52 {
+.pic52 {
     margin-right: 8px;
 }
-.img53 {
+.pic53 {
     margin-right: 8px;
 }
 .sliderbg1 {
@@ -1462,7 +1557,7 @@ swiper-slide {
     background-size: cover;
     background-position: center center;
 }
-.imgbox {
+.picbox {
     width: 100%;
 }
 .swiper-button-prev {
@@ -1490,7 +1585,7 @@ swiper-slide {
 .maxheight123 {
     height: 100%;
 }
-.img81 {
+.pic81 {
     margin-top: 8px;
 }
 .time22 {
@@ -1515,7 +1610,7 @@ swiper-slide {
     border-radius: 8px;
     margin-bottom: 20px;
 }
-.aitext3 {
+.aitxt3 {
     width: 291px;
     height: 80px;
     font-family: 'Roboto';
@@ -1649,7 +1744,7 @@ swiper-slide {
 .lesswidth {
     margin-top: 16px;
 }
-.mainheader51alt {
+.mainTopbarer51alt {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1843,7 +1938,7 @@ swiper-slide {
     justify-content: center;
     margin: 30px;
 }
-.grntext {
+.grntxt {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
@@ -1857,7 +1952,7 @@ swiper-slide {
 .betbgano{
     width: 600px;
 }
-.optext {
+.optxt {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
@@ -1866,7 +1961,7 @@ swiper-slide {
     color: rgba(255, 255, 255, 0.2);
     width: 122px;
 }
-.optext2 {
+.optxt2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
@@ -1878,7 +1973,7 @@ swiper-slide {
 .bgcolor1 {
     background-color: $C8;
 }
-.optext3 {
+.optxt3 {
     margin-bottom: 30px;
 }
 .dc20 {
@@ -1963,7 +2058,7 @@ swiper-slide {
     line-height: 14px;
     color: $C5;
 }
-.header10alt1 {
+.Topbarer10alt1 {
         background-color: $C8;
         height: 100%;
 }
@@ -1995,7 +2090,7 @@ swiper-slide {
     border-radius: 8px 8px 0px 0px;
     width: 100%;
 }
-.tshirtbgimg {
+.tshirtbgpic {
     padding: 0px;
     border-radius: 8px 8px 0px 0px;
     width: 100%;
@@ -2005,7 +2100,7 @@ swiper-slide {
     margin-left: 16px;
     margin-top: 32px;
 }
-.tshirtext1 {
+.tshirtxt1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -2014,7 +2109,7 @@ swiper-slide {
     margin-bottom: 16px;
     margin-top: 16px;
 }
-.tshirtext2 {
+.tshirtxt2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -2022,7 +2117,7 @@ swiper-slide {
     color: $C5;
     margin-bottom: 16px;
 }
-.tshirtext3 {
+.tshirtxt3 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -2030,7 +2125,7 @@ swiper-slide {
     color: $C14;
     margin-bottom: 8px;
 }
-.tshirtext4 {
+.tshirtxt4 {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -2049,7 +2144,7 @@ swiper-slide {
     width: 50%;
     margin-right: 8px;
 }
-.tshirtext5 {
+.tshirtxt5 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2066,7 +2161,7 @@ swiper-slide {
     color: $C5;
     width: 50%;
 }
-.header12alt {
+.Topbarer12alt {
     width: 70%;
     height: inherit;
     overflow:hidden; word-wrap:break-word
@@ -2164,4 +2259,25 @@ swiper-slide {
     border-radius: 8px 8px 0px 0px;
     height: 160px;
     width: 100%;
+}
+.btnEnded{
+    background-color: $C10;
+    
+}
+.anotherline{
+    width: 110px;
+}
+.wntxt {
+    background-color: $C17; /* Assuming $C17 is defined */
+    color: $C18; /* Assuming $C18 is defined */
+    padding: 4px 16px;
+    position: absolute;
+    z-index: 3;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -90px;
+    transform: rotate(-45deg);
+    top: 15px;
 }

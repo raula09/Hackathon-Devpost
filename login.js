@@ -12,7 +12,7 @@ if (!username) {
 }
 
 
-const positions = ['Front End Developer', 'Backend Developer', 'Fullstack Developer', 'UI/UX Designer', 'Other'];
+const positions = ['Frontend Developer', 'Backend Developer', 'Fullstack Developer', 'UI/UX Designer', 'Other'];
 
 
 let position = localStorage.getItem('position');
