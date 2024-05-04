@@ -6,231 +6,463 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+            .modal-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+                z-index: 9999; /* ensure modal is on top of other content */
+                justify-content: center;
+                align-items: center;
+                overflow: auto;
+            }
+
+            .modal-content {
+                /* background-color: #272B3080
+                ;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  */
+                opacity: 100%;
+            }
+
+            .modal-overlay.active {
+                display: flex;
+            }
+
+            .hide {
+                display: none;
+            }
+            nav {
+    position: fixed;
+    padding: 25px 60px;
+    z-index: 1;
+}
+nav a img {
+    width: 167px;
+}
+.form-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+}
+.form-wrapper h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+.form-wrapper form {
+    margin: 25px 0 65px;
+}
+form .form-control {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+.form-control input {
+height: 51px;
+  width: 105%;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 20px;
+  position: absolute;
+  left: -5px;
+  top: -1px;
+}
+.form-control input:is(:focus, :valid) {
+    background: #444;
+    padding: 16px 20px 0;
+}
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    transition: all 0.1s ease;
+}
+.form-control input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    background: #e50914;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+form button:hover {
+    background: #c40812;
+}
+.form-wrapper a {
+    text-decoration: none;
+}
+.form-wrapper a:hover {
+    text-decoration: underline;
+}
+.form-wrapper :where(label, p, small, a) {
+    color: #b3b3b3;
+}
+form .form-help {
+    display: flex;
+    justify-content: space-between;
+}
+form .remember-me {
+    display: flex;
+}
+form .remember-me input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+form .form-help :where(label, a) {
+    font-size: 0.9rem;
+}
+.form-wrapper p a {
+    color: #fff;
+}
+.form-wrapper small {
+    display: block;
+    margin-top: 15px;
+    color: #b3b3b3;
+}
+.form-wrapper small a {
+    color: #0071eb;
+}
+@media (max-width: 740px) {
+    body::before {
+        display: none;
+    }
+    nav, .form-wrapper {
+        padding: 20px;
+    }
+    nav a img {
+        width: 140px;
+    }
+    .form-wrapper {
+        width: 100%;
+        top: 43%;
+    }
+    .form-wrapper form {
+        margin: 25px 0 40px;
+    }
+}
+        </style>
     </head>
     <body>
-        <div class="Topbarer m-0">
-            <div class="d-flex justify-content-start txtTopbar1">
-                <div><img src="Logo.png"></div>
-                <a href="hackathon.html" class="txt1">Hackathons</a>
-                <div class="txt1">Projects</div>
-                <div class="txt1">Events</div>
-                <div class="txt1">Jobs</div>
-            </div>
-            <div class="d-flex justify-content-end txtTopbar1">
-                <div class="">
-                    <a href="shop.html" class="pic21 d-flex align-items-center"><img src="award.png"></a>
+        <body>
+            <div class="Topbarer m-0">
+                <div class="d-flex justify-content-start txtTopbar1">
+                    <div><a href="index.html"><img src="Logo.png"></a></div>
+                    <a href="hackathon.html" class="txt1" style="color: #CED4DA;">Hackathons</a>
+                    <div class="txt1">Projects</div>
+                    <div class="txt1">Events</div>
+                    <div class="txt1">Jobs</div>
                 </div>
-                <div class="">
-                    <div class="pic21 d-flex align-items-center"><img src="bell.png"></div>
-                    <div class="bellnotification">4</div>
-                </div>
-                <div class="">
-                    <div class="pic21 d-flex align-items-center"><img src="mail.png"></div>
-                </div>
-                <div class="d-flex align-items-center"><img class="nowidth d-flex align-items-center" src="avatar.png"></div>
-            </div>
-        </div>
-        
-        <div class="container-fluid m-0 p-0 background1">
-            <div class="d-flex justify-content-around">
-                <div class="d-flex align-items-center lesswidth">
-                    <div><img src="avatarbig.png"></div>
-                    <div class="d-flex flex-column">
-                        <div class="guest1">guest</div>
-                        <div class="guest2">Frontend Developer</div>
+                <div class="d-flex justify-content-end txtTopbar1">
+                    <div class="">
+                        <a href="shop.html" class="pic21 d-flex align-items-center" style="color: #CED4DA;"> <img src="award.png"></a>
                     </div>
-                </div>
-                <div class="d-flex justify-content-end lesswidth">
-                    <div class="pr1">12 PROJECTS</div>
-                    <div class="pr2">10 HACKATHONS</div>
-                    <div class="pr3">68 FOLLOWER</div>
-                    <div class="pr4">24 FOLLOWING</div>
-                    <div class="pr5">16 LIKES</div>
-                </div>
-            </div>
-            <div class="maxwidth123 d-flex align-items-center flex-column bgcolor1">
-            <div class="mainTopbarer51alt d-flex align-items-center">
-                <div class="d-flex maxwidth123 justify-content-start"><div class="txth3">Rank</div></div>
-                <div class="d-flex maxwidth123 justify-content-start"><div class="txth3">XP</div></div>
-        </div>
-        <div class="lesswidth12 d-flex justify-content-between">
-        <div class="d-flex blackbox align-items-center justify-content-evenly lesswidth">
-            <div class="d-flex flex-column">
-                <div class="lr1">Your rank among all</div>
-                <div class="dropdown">
-                    <button class="dropbtnalt d-flex">participants<div><img class="image11" src="drop.png"></div></button>
-                    <div class="dropdown-content">
-                      <div class="dc1">frontend developers</div>
-                      <div class="dc1">backend developers</div>
-                      <div class="dc1">fullstack developers</div>
-                      <div class="dc1">software developers</div>
-                      <div class="dc1">ui / ux designers</div>
+                    <div class="">
+                        <div class="pic21 d-flex align-items-center"><img src="bell.png"></div>
+                        <div class="bellnotification">4</div>
                     </div>
-                  </div>
-            </div>
-            <div class="numbers">746 th</div>
-        </div>
-        <div class="blackbox2 d-flex align-items-center justify-content-evenly lesswidth">
-            <div class="lvl1">Level 69</div>
-            <div>
-                <div class="d-flex flex-column">
-                    <img class="xp3 chart100" src="bar.png">
-                    <div class="d-flex justify-content-between">
-                    <div class="xp">2400 XP</div>
-                    <div class="xp2">3200</div>
-                    <div class="xp">3200 XP</div>
+                    <div class="">
+                        <div class="pic21 d-flex align-items-center"><img src="mail.png"></div>
+                    </div>
+                    <div class="d-flex align-items-center"><img class="nowidth d-flex align-items-center" src="avatar.png"></div>
                 </div>
-                </div>
-            </div>
-            <div class="lvl1">Level 70</div>
-        </div>
-    </div>
-    <div class="lesswidth12 d-flex justify-content-center">
-        <div class="d-flex flex-column width22">
-        <div class="d-flex bluebox align-items-center justify-content-start margr lesswidth width23">
-            <div class="wallet">
-            Wallet
             </div>
             
-        </div>
-        <div class="d-flex blackbox11 align-items-center justify-content-evenly lesswidth width23">
-            <div class="d-flex flex-column">
-                <div class="numbers21">Total Earnings</div>
-                <div class="numbers22">1200 $</div>
+            <div class="container-fluid m-0 p-0 background1">
+                <div class="d-flex justify-content-around">
+                    <div class="d-flex align-items-center lesswidth">
+                        <div><img src="avatarbig.png" style="margin-bottom: 0px;"></div>
+                        <div class="d-flex flex-column">
+                            <div class="guest1">guest</div>
+                            <div class="guest2">Frontend Developer</div>
+                            <span style="margin: 0;">
+                                <span class="btn1 txt3" id="signInButton" onclick="toggleModal()" style="margin: 0;">Log In</span>
+                            </span>
+                        </div>
+                    </div>
+                
+                    <!-- Modal -->
+                    <div class="modal-overlay" id="modalOverlay">
+                     <div class="modal-content">
+                     
+
+                            <div class="form-wrapper">
+                        <h2>Sign In</h2>
+                        <form action="#" onsubmit="signIn(event)">
+                            <div class="form-control">
+                                <input type="text" required id="username">
+                                <label>Email or phone number</label>
+                            </div>
+                            <div class="form-control">
+                                <input type="password" required id="password">
+                                <label>Password</label>
+                            </div>
+                            
+                            <label for="position">Position</label><br>
+                            
+                            <select name="position" id="position" style="background-color: #333;
+                            border: #333;
+                            color: #818181;
+                            width: 321px;
+                            height: 47px;
+                            border-radius: 4px;">
+                                <option value="Frontend Developer">Frontend Developer</option>
+                                <option value="Backend Developer">Backend Developer</option>
+                                <option value="UI/UX Designer">UI/UX Designer</option>
+                                <option value="Cyber Security">Cyber Security</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            
+                            <br>
+                            <button type="submit">Sign In</button>
+                            <div class="form-help"> 
+                                <div class="remember-me">
+                                    <input type="checkbox" id="remember-me">
+                                    <label for="remember-me">Remember me</label>
+                                </div>
+                                <a href="#">Need help?</a>
+                            </div>
+                        </form>
+                        <p>New to Devpost? <a href="#">Sign up now</a></p>
+                        <small>
+                            This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+                            <a href="#">Learn more.</a>
+                        </small>
+                    </div>
+                        </div>
+                       
+                    
+                    </div>
+
+                  
+                
+                    <div class="d-flex justify-content-end lesswidth">
+                        <div class="pr1">12 PROJECTS</div>
+                        <div class="pr2">10 HACKATHONS</div>
+                        <div class="pr3">68 FOLLOWER</div>
+                        <div class="pr4">24 FOLLOWING</div>
+                        <div class="pr5">16 LIKES</div>
+                    </div>
+                </div>
+                <div class="maxwidth123 d-flex align-items-center flex-column bgcolor1">
+                <div class="mainTopbarer51alt d-flex align-items-center">
+                    <div class="d-flex maxwidth123 justify-content-start"><div class="txth3">Rank</div></div>
+                    <div class="d-flex maxwidth123 justify-content-start"><div class="txth3">XP</div></div>
             </div>
-            <div class="d-flex flex-column">
-                <div class="numbers21alt">DevCoin </div>
-                <div class="numbers22alt">20 DC</div>
+            <div class="lesswidth12 d-flex justify-content-between">
+            <div class="d-flex blackbox align-items-center justify-content-evenly lesswidth">
+                <div class="d-flex flex-column">
+                    <div class="lr1">Your rank among all</div>
+                    <div class="dropdown">
+                        <button class="dropbtnalt d-flex">participants<div><img class="image11" src="drop.png"></div></button>
+                        <div class="dropdown-content">
+                          <div class="dc1">frontend developers</div>
+                          <div class="dc1">backend developers</div>
+                          <div class="dc1">fullstack developers</div>
+                          <div class="dc1">software developers</div>
+                          <div class="dc1">ui / ux designers</div>
+                        </div>
+                      </div>
+                </div>
+                <div class="numbers">746 th</div>
+            </div>
+            <div class="blackbox2 d-flex align-items-center justify-content-evenly lesswidth">
+                <div class="lvl1">Level 69</div>
+                <div>
+                    <div class="d-flex flex-column">
+                        <img class="xp3 chart100" src="bar.png">
+                        <div class="d-flex justify-content-between">
+                        <div class="xp">2400 XP</div>
+                        <div class="xp2">3200</div>
+                        <div class="xp">3200 XP</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="lvl1">Level 70</div>
             </div>
         </div>
-    </div>
-        <div class="chart101">
-            <img class="chart100 lol" src="Chart.png">
+        <div class="lesswidth12 d-flex justify-content-center">
+            <div class="d-flex flex-column width22">
+            <div class="d-flex bluebox align-items-center justify-content-start margr lesswidth width23">
+                <div class="wallet">
+                Wallet
+                </div>
+                
+            </div>
+            <div class="d-flex blackbox11 align-items-center justify-content-evenly lesswidth width23">
+                <div class="d-flex flex-column">
+                    <div class="numbers21">Total Earnings</div>
+                    <div class="numbers22">1200 $</div>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="numbers21alt">DevCoin </div>
+                    <div class="numbers22alt">20 DC</div>
+                </div>
+            </div>
         </div>
+            <div class="chart101">
+                <img class="chart100 lol" src="Chart.png">
+            </div>
+        </div>
+        <div class="mainTopbarer51alt d-flex align-items-center">
+            <div class="d-flex maxwidth123 justify-content-start"><div class="txth3">Achievements</div></div>
     </div>
-    <div class="mainTopbarer51alt d-flex align-items-center">
-        <div class="d-flex maxwidth123 justify-content-start"><div class="txth3">Achievements</div></div>
-</div>
+            <div class="d-flex justify-content-evenly betbg">
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ1.png">
+                <div class="grntxt">Join your first hackathon</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ2.png">
+                <div class="grntxt">Join your first team</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ3.png">
+                <div class="grntxt">1 Hackathon Win</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ4.png">
+                <div class="optxt">5 Hackathon Win</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ4.png">
+                <div class="optxt">10 Hackathon Win</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ5.png">
+                <div class="optxt">Win a hackathon as a team</div>
+            </div>
+        </div>
         <div class="d-flex justify-content-evenly betbg">
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ1.png">
-            <div class="grntxt">Join your first hackathon</div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ6.png">
+                <div class="grntxt">Complete 1 year in Devpost</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ7.png">
+                <div class="grntxt">Write 1 blog post</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ8.png">
+                <div class="grntxt">Follow at least 20 people</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ9.png">
+                <div class="optxt">Following by 20 people</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ10.png">
+                <div class="optxt">Join 5 fintech-themed hackathons</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ11.png">
+                <div class="optxt">Participate in 5 eco-themed hackathons</div>
+            </div>
         </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ2.png">
-            <div class="grntxt">Join your first team</div>
+        <div class="d-flex justify-content-evenly betbg betbgano">
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ12.png">
+                <div class="optxt">Join 5 hackathons with an education theme</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ13.png">
+                <div class="optxt2">Join 5 IoT-themed hackathons</div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="circ612" src="circ14.png">
+                <div class="optxt2 optxt3">Join 5 design-themed hackathons</div>
+            </div>
         </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ3.png">
-            <div class="grntxt">1 Hackathon Win</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ4.png">
-            <div class="optxt">5 Hackathon Win</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ4.png">
-            <div class="optxt">10 Hackathon Win</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ5.png">
-            <div class="optxt">Win a hackathon as a team</div>
-        </div>
-    </div>
-    <div class="d-flex justify-content-evenly betbg">
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ6.png">
-            <div class="grntxt">Complete 1 year in Devpost</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ7.png">
-            <div class="grntxt">Write 1 blog post</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ8.png">
-            <div class="grntxt">Follow at least 20 people</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ9.png">
-            <div class="optxt">Following by 20 people</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ10.png">
-            <div class="optxt">Join 5 fintech-themed hackathons</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ11.png">
-            <div class="optxt">Participate in 5 eco-themed hackathons</div>
-        </div>
-    </div>
-    <div class="d-flex justify-content-evenly betbg betbgano">
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ12.png">
-            <div class="optxt">Join 5 hackathons with an education theme</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ13.png">
-            <div class="optxt2">Join 5 IoT-themed hackathons</div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-            <img class="circ612" src="circ14.png">
-            <div class="optxt2 optxt3">Join 5 design-themed hackathons</div>
-        </div>
-    </div>
-        </div>
-        <div class="container-fluid m-0 p-0 footer1">
-            <div class="d-flex justify-content-evenly">
-            <div class="d-flex flex-column justify-content-center">
-                <div class=""><img src="Logo.png"></div>
+            </div>
+            <div class="container-fluid m-0 p-0 footer1">
+                <div class="d-flex justify-content-evenly">
+                <div class="d-flex flex-column justify-content-center">
+                    <div class=""><img src="Logo.png"></div>
+                    <div class="d-flex">
+                        <div><img class="pic11 spacer5" src="youtube.png"></div>
+                        <div><img class="pic11" src="twitter.png"></div>
+                        <div><img class="pic11" src="in.png"></div>
+                        <div><img class="pic11" src="facebook.png"></div>
+                    </div>
+                </div>
                 <div class="d-flex">
-                    <div><img class="pic11 spacer5" src="youtube.png"></div>
-                    <div><img class="pic11" src="twitter.png"></div>
-                    <div><img class="pic11" src="in.png"></div>
-                    <div><img class="pic11" src="facebook.png"></div>
+                    <div class="d-flex flex-column spacer3">
+                        <div class="txt11">COMPANY</div>
+                        <div class="txt12">ABOUT</div>
+                        <div class="txt12">CAREERS</div>
+                        <div class="txt12">PRESS</div>
+                        <div class="txt12">CONTACT</div>
+                    </div>
+                    <div class="d-flex flex-column spacer3">
+                        <div class="txt11">DEVELOPERS</div>
+                        <div class="txt13">HACKATHONS</div>
+                        <div class="txt13">DEVCITY</div>
+                        <div class="txt13">LEADERBOARD</div>
+                        <div class="txt13">TEAMS</div>
+                        <div class="txt13">EVENTS</div>
+                        <div class="txt13">BLOG</div>
+                        <div class="txt13">AVAILABLE JOBS</div>
+                        <div class="txt13">MARKETPLACE</div>
+                    </div>
+                    <div class="d-flex flex-column spacer3">
+                        <div class="txt11">PROFESSIONALS</div>
+                        <div class="txt13">HACKATHONS</div>
+                        <div class="txt13">TALENTS</div>
+                        <div class="txt13">MARKETING</div>
+                        <div class="txt13">SALES</div>
+                        <div class="txt13">LEARNING</div>
+                    </div>
+                    <div class="d-flex flex-column spacer3">
+                        <div class="txt13 a6">Community guidelines</div>
+                        <div class="txt13">SECURITY</div>
+                        <div class="txt13">CA NOTICE</div>
+                        <div class="txt13">PRIVACY POLICY</div>
+                        <div class="txt13">TERMS OF SERVICE</div>
+                    </div>
                 </div>
             </div>
-            <div class="d-flex">
-                <div class="d-flex flex-column spacer3">
-                    <div class="txt11">COMPANY</div>
-                    <div class="txt12">ABOUT</div>
-                    <div class="txt12">CAREERS</div>
-                    <div class="txt12">PRESS</div>
-                    <div class="txt12">CONTACT</div>
-                </div>
-                <div class="d-flex flex-column spacer3">
-                    <div class="txt11">DEVELOPERS</div>
-                    <div class="txt13">HACKATHONS</div>
-                    <div class="txt13">DEVCITY</div>
-                    <div class="txt13">LEADERBOARD</div>
-                    <div class="txt13">TEAMS</div>
-                    <div class="txt13">EVENTS</div>
-                    <div class="txt13">BLOG</div>
-                    <div class="txt13">AVAILABLE JOBS</div>
-                    <div class="txt13">MARKETPLACE</div>
-                </div>
-                <div class="d-flex flex-column spacer3">
-                    <div class="txt11">PROFESSIONALS</div>
-                    <div class="txt13">HACKATHONS</div>
-                    <div class="txt13">TALENTS</div>
-                    <div class="txt13">MARKETING</div>
-                    <div class="txt13">SALES</div>
-                    <div class="txt13">LEARNING</div>
-                </div>
-                <div class="d-flex flex-column spacer3">
-                    <div class="txt13 a6">Community guidelines</div>
-                    <div class="txt13">SECURITY</div>
-                    <div class="txt13">CA NOTICE</div>
-                    <div class="txt13">PRIVACY POLICY</div>
-                    <div class="txt13">TERMS OF SERVICE</div>
-                </div>
-            </div>
+            <div class="spacer4"></div>
         </div>
-        <div class="spacer4"></div>
     </div>
-</div>
-        <script>
-        </script>
-                <script src="login.js">
-                </script>
+    
+
+    <script src="login.js">
+ 
+    </script>
+    
     </body>
 </html>

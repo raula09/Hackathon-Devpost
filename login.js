@@ -1,44 +1,50 @@
+function toggleModal() {
+  let modal = document.getElementById('modalOverlay');
+  modal.classList.toggle('active');
+}
 
-let username = localStorage.getItem('username');
+function signIn(event) {
+event.preventDefault();
+
+let signInButton = document.getElementById('signInButton');
+let username = document.getElementById('username').value;
+let password = document.getElementById('password').value;
+let position = document.getElementById('position').value;
 
 
-if (!username) {
-  do {
-    username = prompt('Your username is required:');
-  } while (!username || username.trim() === '');
+localStorage.setItem('username', username);
+localStorage.setItem('password', password);
+localStorage.setItem('position', position);
 
- 
-  localStorage.setItem('username', username);
+
+toggleModal();
+
+
+updateGuestInfo();
+
+
+signInButton.classList.add('hide');
+
+
+alert("Sign-in successful!");
 }
 
 
-const positions = ['Frontend Developer', 'Backend Developer', 'Fullstack Developer', 'UI/UX Designer', 'Other'];
+function updateGuestInfo() {
+  let username = localStorage.getItem('username');
+  let position = localStorage.getItem('position');
 
+  if (username && position) {
+      let guestElement1 = document.querySelector('.guest1');
+      if (guestElement1) {
+          guestElement1.textContent = username;
+      }
 
-let position = localStorage.getItem('position');
-
-
-if (!position || !positions.includes(position)) {
-  let positionIndex;
-  do {
-    const positionChoice = prompt(`Please choose your position from the following options:\n\n${positions.map((pos, index) => `${index + 1}. ${pos}`).join('\n')}`);
-    positionIndex = parseInt(positionChoice) - 1;
-  } while (isNaN(positionIndex) || positionIndex < 0 || positionIndex >= positions.length);
-
- 
-  position = positions[positionIndex];
-  localStorage.setItem('position', position);
-}
-
-
-if (username) {
-  const guestElement = document.querySelector('.guest1');
-  if (guestElement) {
-    guestElement.textContent = ` ${username}`;
+      let guestElement2 = document.querySelector('.guest2');
+      if (guestElement2) {
+          guestElement2.textContent = position;
+      }
   }
-
-  const guestElement2 = document.querySelector('.guest2');
-  if (guestElement2) {
-    guestElement2.textContent = ` ${position || 'Not provided'}`;
-  }
 }
+
+updateGuestInfo();

@@ -1,21 +1,21 @@
-// Retrieve the stored username from local storage
-let username = localStorage.getItem('username');
+// // Retrieve the stored username from local storage
+// let username = localStorage.getItem('username');
 
 
-if (!username) {
-  let userInput;
+// if (!username) {
+//   let userInput;
   
  
-  while (!userInput) {
-    userInput = prompt('Please enter your username:');
-  }
+//   while (!userInput) {
+//     userInput = prompt('Please enter your username:');
+//   }
   
   
-  localStorage.setItem('username', userInput);
+//   localStorage.setItem('username', userInput);
   
  
-  username = userInput;
-}
+//   username = userInput;
+// }
 
 
-document.querySelector('.guest1').textContent = username;
+// document.querySelector('.guest1').textContent = username;

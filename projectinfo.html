@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="converted.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f81574c403.js" crossorigin="anonymous"></script> 
+    
+<style>
+    .hidden {
+    display: none;
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 999; /* Ensure the modal appears on top of other elements */
+}
+
+.modal-overlay.active {
+    display: flex; /* Display the modal when active */
+    justify-content: center; /* Center the modal horizontally */
+    align-items: center; /* Center the modal vertically */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+</style>
+    
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+    <div class="Topbarer m-0">
+        <div class="d-flex justify-content-start txtTopbar1">
+            <div><a href="index.html"><img src="Logo.png"></a></div>
+            <a href="hackathon.html" class="txt1" style="color: #CED4DA;">Hackathons</a>
+            <div class="txt1">Projects</div>
+            <div class="txt1">Events</div>
+            <div class="txt1">Jobs</div>
+        </div>
+        <div class="d-flex justify-content-end txtTopbar1">
+            <div class="">
+                <a href="shop.html" class="pic21 d-flex align-items-center" style="color: #CED4DA;"><img src="award.png"></a>
+                <div class="awardsnotification">1</div>
+            </div>
+            <div class="">
+                <div class="pic21 d-flex align-items-center"><img src="bell.png"></div>
+                <div class="bellnotification">4</div>
+            </div>
+            <div class="">
+                <div class="pic21 d-flex align-items-center"><img src="mail.png"></div>
+                <div class="mailnotification">2</div>
+            </div>
+            <a href="login.html" class="d-flex align-items-center" style="color: #CED4DA;"><img class="nowidth d-flex align-items-center" src="avatar.png"></a>
+        </div>
+    </div>
+<div class="container123456">
+    <div class="mainTopbarer2 flex-column d-flex projectheadercnt">
+        <div class="maxwidth123 d-flex justify-content-center">
+
+            <div class="projectheader">
+                <span class="txt3" id="projectInfoBtn" style="font-weight: 700; color: white; font-weight: 700; color: white; width: 100px; margin: 0; line-height: 2; height: 30px;">Project info</span>
+                <span class="txt1" id="teamBtn">Team</span>
+                <span class="txt1" id="projectLinksBtn">Project Links</span>
+                <span class="txt1" id="calendarBtn">Calendar</span>
+                <span class="txt1" id="presentationBtn">Presentation</span>
+            </div>
+            
+            <div id="projectInfoSection" class="section">
+                <div class="infoContent">
+                    <span class="ProInfo txt3" style="color: #fff; left: 285px; font-weight: 700;">Project Info</span>
+                    <div class="lineproj"></div>
+                    <div class="namesDiv">
+                        <span class="txt1">Cover Image</span>
+                        <img src="appLogo.jpg" alt="" height="120px" width="227px" style="border-radius: 5px;">
+                    </div>
+                    <div class="restDiv">
+                        <span class="txt1">Project Name</span>
+                        <input type="text" value="1View" readonly style="width: 689px;">
+                        <span class="txt1">Description</span>
+                        <input type="text" value="Search by hackathon title or keyword" readonly style="width: 689px;">
+                    </div>
+                    
+                    </div>
+                    
+            </div>
+            
+            <div id="teamSection" class="section hidden">
+               <div class="infoContent2">
+                <span class="ProInfo txt3" style="color: white; left: 285px; font-weight: 700;"> Team</span>
+                <div class="lineproj"></div>
+                <div class="bothaccounts">
+                <div class="profile1" >
+                    
+                    <div class="d-flex align-items-center lesswidth acc1" style="position: absolute;
+                    left: 268px; background-color: #272b30; padding: 16px 32px; border-radius: 4px;">
+                        <div><img src="avatarbig.png" height="50px" style="margin-bottom: 10px;"></div>
+                        <div class="d-flex flex-column">
+                            <div class="guest1">raul</div>
+                            <div class="guest2" style="width: 155px;">Frontend Developer</div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="d-flex align-items-center lesswidth acc2 profile2" style="background-color: #272b30;
+                  padding: 21px 32px;
+                  border-radius: 4px;
+                  position: absolute;
+                  left: -16px;">
+                        <div><img src="girl.png" height="50px"></div>
+                        <div class="d-flex flex-column">
+                            <div class="guest1">Laverne</div>
+                            <div class="guest2" style="width: 155px;">UI / UX Designer</div>
+                        </div>
+                    </div>
+                    <div class="addprofile"><i class="fa-solid fa-plus"></i></div>
+
+                   
+                    
+                </div>
+
+              
+               </div>
+            </div>
+            
+            <div id="projectLinksSection" class="section hidden">
+                <span class="ProInfo txt3" style="color: white; left: 285px; font-weight: 700;">Project Links</span>
+                <div class="lineproj"></div>
+                <div class="socialM">
+               <div class="github">
+<img src="github.png" alt="" height="50px">
+<div class="githubinfo">
+<span>Github</span>
+<span class="textbio">Projects Code</span>
+</div>
+               </div>
+               <div class="figma">
+                <img src="figma.png" alt="" height="50px" >
+                <div class="figmainfo">
+                <span>Figma</span>
+                <span class="textbio">Design Files</span>
+                </div>
+                               </div>
+                               <div class="discord">
+                                <img src="discord.png" alt="" height="50px">
+                                <div class="discordinfo">
+                                <span>Discord</span>
+                                <span class="textbio">Communication</span>
+                                </div>
+                                               </div>
+                                            </div>
+                                               <div class="addprofile" style="position: absolute;
+                                               left: 887px;
+                                               top: 155px;"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            
+            <div id="calendarSection" class="section hidden">
+                <span class="ProInfo txt3" style="color: white; left: 285px; font-weight: 700;">Calendar</span>
+                <div class="lineproj"></div>
+                <img src="calendarbg.png" alt="" style="position: absolute;
+                height: 284px;
+                width: 900px;
+                top: 157px;
+                left: 285px;">
+            </div>
+            
+            <div id="presentationSection" class="section hidden">
+                <!-- Presentation section content -->
+            </div>
+            
+
+
+
+
+
+
+
+
+
+        </div>
+        </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+        
+        <div class="container-fluid m-0 p-0 footer1">
+            <div class="d-flex justify-content-evenly">
+            <div class="d-flex flex-column justify-content-center">
+                <div class=""><img src="Logo.png"></div>
+                <div class="d-flex">
+                    <div><img class="pic11 spacer5" src="youtube.png"></div>
+                    <div><img class="pic11" src="twitter.png"></div>
+                    <div><img class="pic11" src="in.png"></div>
+                    <div><img class="pic11" src="facebook.png"></div>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="d-flex flex-column spacer3">
+                    <div class="txt11">COMPANY</div>
+                    <div class="txt12">ABOUT</div>
+                    <div class="txt12">CAREERS</div>
+                    <div class="txt12">PRESS</div>
+                    <div class="txt12">CONTACT</div>
+                </div>
+                <div class="d-flex flex-column spacer3">
+                    <div class="txt11">DEVELOPERS</div>
+                    <div class="txt13">HACKATHONS</div>
+                    <div class="txt13">DEVCITY</div>
+                    <div class="txt13">LEADERBOARD</div>
+                    <div class="txt13">TEAMS</div>
+                    <div class="txt13">EVENTS</div>
+                    <div class="txt13">BLOG</div>
+                    <div class="txt13">AVAILABLE JOBS</div>
+                    <div class="txt13">MARKETPLACE</div>
+                </div>
+                <div class="d-flex flex-column spacer3">
+                    <div class="txt11">PROFESSIONALS</div>
+                    <div class="txt13">HACKATHONS</div>
+                    <div class="txt13">TALENTS</div>
+                    <div class="txt13">MARKETING</div>
+                    <div class="txt13">SALES</div>
+                    <div class="txt13">LEARNING</div>
+                </div>
+                <div class="d-flex flex-column spacer3">
+                    <div class="txt13 a6">Community guidelines</div>
+                    <div class="txt13">SECURITY</div>
+                    <div class="txt13">CA NOTICE</div>
+                    <div class="txt13">PRIVACY POLICY</div>
+                    <div class="txt13">TERMS OF SERVICE</div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer4"></div>
+    </div>
+  <script>
+    // Get references to the "addprofile" div and the modal overlay
+const addProfileButton = document.querySelector('.addprofile');
+const modalOverlay = document.getElementById('modalOverlay');
+
+// Add click event listener to the "addprofile" div
+addProfileButton.addEventListener('click', () => {
+    // Toggle the visibility of the modal overlay
+    modalOverlay.classList.toggle('active');
+});
+
+// Close the modal when clicking outside the modal content
+modalOverlay.addEventListener('click', (event) => {
+    if (event.target === modalOverlay) {
+        modalOverlay.classList.remove('active');
+    }
+});
+
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="projectinfo.js"></script>
+        <script src="login.js">
+        </script>
+       
+    </body>
+</html>
+
+
+
+
+
