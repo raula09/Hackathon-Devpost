@@ -6,14 +6,16 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <link rel="icon" type="image/jpg" href="mini-walter.jpg">
     </head>
     <body>
         <div class="Topbarer m-0">
             <div class="d-flex justify-content-start txtTopbar1">
                 <div><a href="index.html"><img src="Logo.png"></a></div>
                 <a href="hackathon.html" class="txt1" style="color: #CED4DA;">Hackathons</a>
-               <a href="projects.html"> <div class="txt1" style="color: #CED4DA;">Projects</div></a>
+               <a href="projects.html" style="text-decoration: none;"> <div class="txt1" style="color:  #CED4DA; text-decoration: none;
+                
+                margin-top: 7px;">Projects</div></a>
                 <div class="txt1">Events</div>
                 <div class="txt1">Jobs</div>
             </div>
@@ -31,8 +33,8 @@
                 <a href="login.html" class="d-flex align-items-center"><img class="nowidth d-flex align-items-center" src="avatar.png"></a>
             </div>
         </div>
-        <!--TopbarER^-->
-    <div class="container-fluid p-0 m-0 Topbarer10alt1 d-flex justify-content-center">
+       
+    <div class="container-fluid p-0 m-0 Topbarer10alt1 d-flex justify-content-center" style="height: 1237px;">
         <div class="d-flex">
         <div class="mainTopbarer2 flex-column d-flex">
             <div class="maxwidth123 d-flex justify-content-center">
@@ -112,8 +114,14 @@
                 </div>
                 <div class="d-flex justify-content-end">
                 <div class="">
-                    <div class="pic21 d-flex align-items-center"><img src="cart.png"></div>
-                    <div class="cartnotification">0</div>
+                    <div class="pic21 d-flex align-items-center">
+                        <img src="cart.png">
+                        <div id="cartNotification" class="cartnotification" style="position: absolute;
+                        top: 76px;
+                      
+                        left: 1359px;">0</div>
+                    </div>
+                    
                 </div>
                 </div>
             </div>
@@ -129,7 +137,7 @@
                             <div class="tshirtxt2">Eat - Sleep - Code - Repeat</div>
                             <div class="tshirtxt3">10 DC</div>
                             <div class="d-flex maxwidth123 justify-content-center">
-                                <div class="tshirtxt4">Add to Cart</div>
+                                <div class="tshirtxt4 addToCartBtn">Add to Cart</div>
                                 <div class="tshirtxt5">Buy Now</div>
                             </div>
                         </div>
@@ -144,7 +152,7 @@
                                 <div class="tshirtxt2">STEM</div>
                                 <div class="tshirtxt3">10 DC</div>
                                 <div class="d-flex maxwidth123 justify-content-center">
-                                    <div class="tshirtxt4">Add to Cart</div>
+                                    <div class="tshirtxt4 addToCartBtn">Add to Cart</div>
                                     <div class="tshirtxt5">Buy Now</div>
                                 </div>
                             </div>
@@ -159,14 +167,14 @@
                                     <div class="tshirtxt2">I Convert Coffee Into Code</div>
                                     <div class="tshirtxt3">10 DC</div>
                                     <div class="d-flex maxwidth123 justify-content-center">
-                                        <div class="tshirtxt4">Add to Cart</div>
+                                        <div class="tshirtxt4 addToCartBtn">Add to Cart</div>
                                         <div class="tshirtxt5">Buy Now</div>
                                     </div>
                                 </div>
                             </div>
                             </div>
             </div>
-            <!--BOX-->
+            
             <div class="d-flex swiper-slide">
                 <div class="box2alt">
                     <div class="tshirtbg"><img class="tshirtbgpic" src="shirt4.png">
@@ -177,7 +185,7 @@
                             <div class="tshirtxt2">Gift Card</div>
                             <div class="tshirtxt3">50 DC</div>
                             <div class="d-flex maxwidth123 justify-content-center">
-                                <div class="tshirtxt4">Add to Cart</div>
+                                <div class="tshirtxt4 addToCartBtn">Add to Cart</div>
                                 <div class="tshirtxt5">Buy Now</div>
                             </div>
                         </div>
@@ -192,7 +200,7 @@
                                 <div class="tshirtxt2">STEM</div>
                                 <div class="tshirtxt3">5 DC</div>
                                 <div class="d-flex maxwidth123 justify-content-center">
-                                    <div class="tshirtxt4">Add to Cart</div>
+                                    <div class="tshirtxt4 addToCartBtn">Add to Cart</div>
                                     <div class="tshirtxt5">Buy Now</div>
                                 </div>
                             </div>
@@ -207,7 +215,7 @@
                                     <div class="tshirtxt2">Udemy Discount Coupon</div>
                                     <div class="tshirtxt3">5 DC</div>
                                     <div class="d-flex maxwidth123 justify-content-center">
-                                        <div class="tshirtxt4">Add to Cart</div>
+                                        <div class="tshirtxt4 addToCartBtn">Add to Cart</div>
                                         <div class="tshirtxt5">Buy Now</div>
                                     </div>
                                 </div>
@@ -224,7 +232,7 @@
                             <div class="tshirtxt2">1 Month Free Instance</div>
                             <div class="tshirtxt3">15 DC</div>
                             <div class="d-flex maxwidth123 justify-content-center">
-                                <div class="tshirtxt4">Add to Cart</div>
+                                <div class="tshirtxt4 addToCartBtn">Add to Cart</div>
                                 <div class="tshirtxt5">Buy Now</div>
                             </div>
                         </div>
@@ -239,7 +247,7 @@
                                 <div class="tshirtxt2">Pack of 100 Programming Stickers</div>
                                 <div class="tshirtxt3">3 DC</div>
                                 <div class="d-flex maxwidth123 justify-content-center">
-                                    <div class="tshirtxt4">Add to Cart</div>
+                                    <div class="tshirtxt4 addToCartBtn">Add to Cart</div>
                                     <div class="tshirtxt5">Buy Now</div>
                                 </div>
                             </div>
@@ -254,7 +262,7 @@
                                     <div class="tshirtxt2">1000 Credits For DALL-E</div>
                                     <div class="tshirtxt3">15 DC</div>
                                     <div class="d-flex maxwidth123 justify-content-center">
-                                        <div class="tshirtxt4">Add to Cart</div>
+                                        <div class="tshirtxt4 addToCartBtn">Add to Cart</div>
                                         <div class="tshirtxt5">Buy Now</div>
                                     </div>
                                 </div>
@@ -262,7 +270,7 @@
                             </div>
             </div>    
     </div>
-    <div class="swiper-pagination"></div>    
+     
     </div>
     </div>
     </div>
@@ -315,17 +323,27 @@
     </div>
     <div class="spacer4"></div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script>
-        var swiper = new Swiper(".mySwiper", {
-      direction: "vertical",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        draggable: true,
-      },
+<script>
+    
+    const cartNotification = document.getElementById('cartNotification');
+    
+    
+    const addToCartButtons = document.querySelectorAll('.addToCartBtn');
+
+    
+    let cartCount = 0;
+
+    
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            
+            cartCount++;
+            
+            cartNotification.innerText = cartCount;
+        });
     });
-        </script>
+</script>
+
                 <script src="login.js">
                 </script>
     </body>
