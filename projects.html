@@ -2,14 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" href="converted.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f81574c403.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" href="mini-walter.jpg">
     <style>
-        /* Modal styles */
+      
         .modal {
             display: none;
             position: fixed;
@@ -18,14 +18,13 @@
             top: 0;
             width: 100%;
             height: 90%;
-            background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
-            overflow: auto; /* Enable scroll if needed */
-            
+            background-color: rgba(0, 0, 0, 0.6);
+            overflow: auto; 
         }
 
         .modal-content {
             background-color: #272b30;
-            margin: 10% auto; /* Center modal on screen */
+            margin: 10% auto; 
             padding: 20px;
             border: 1px solid #888;
             opacity: 95%;
@@ -63,14 +62,32 @@
     background-image: url(working.jpg);
 }
 
-/* Style for the second pagination bullet */
+
 .swiper-pagination-bullet:nth-child(2) {
     background-color: blue;
 }
 
-/* Style for the third pagination bullet */
+
 .swiper-pagination-bullet:nth-child(3) {
     background-color: green;
+}
+.commentTxt{
+    color: rgb(0, 0, 0);
+  background-color: rgb(231, 235, 238);
+  padding: 5px 10px;
+  width: 519px;
+  border-radius: 27px;
+  
+  position: absolute;
+  bottom: -157px;
+  left: 65px;
+}
+.commentname{
+    position: absolute;
+  color: white;
+  bottom: -119px;
+  left: 73px;
+
 }
     </style>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
@@ -81,7 +98,9 @@
         <div class="d-flex justify-content-start txtTopbar1">
             <div><a href="index.html"><img src="Logo.png"></a></div>
             <a href="hackathon.html" class="txt1" style="color: #CED4DA;">Hackathons</a>
-            <div class="txt1">Projects</div>
+            <a href="projects.html" style="text-decoration: none;"> <div class="txt1" style="color:  #CED4DA; text-decoration: none;
+                
+                margin-top: 7px;">Projects</div></a>
             <div class="txt1">Events</div>
             <div class="txt1">Jobs</div>
         </div>
@@ -265,7 +284,13 @@
             <img src="trophy.png" alt="" height="20px"> <span>App for marketplace</span>
         </div>
         <div class="d-flex align-items-center lesswidth acc1">
-            <div><img src="avatarbig.png"></div>
+            <div id="avatarContainer" style="cursor: pointer;">
+                <img id="avatarImg" src="avatarbig.png" style="margin-bottom: 0px;">
+               
+
+            </div> 
+            <input type="file" id="fileInput" accept="image/*" onchange="handleFileInputChange(event)" style="display: none;">
+
             <div class="d-flex flex-column">
                 <div class="guest1">raul</div>
                 <div class="guest2">Frontend Developer</div>
@@ -332,8 +357,8 @@
         position: absolute;
         left: -20px;
         top: 1px;">
-        <div class="bluebtxt" style="padding-left: 10px; font-weight: bold;">Overview</div>
-        <div class="bluebtxt" style="padding-left: 10px;">Comments</div>
+        <div class="bluebtxt" style="padding-left: 10px; font-weight: bold;" id="overviewButton">Overview</div>
+        <div class="bluebtxt" style="padding-left: 10px;" id="commentsButton">Comments</div>
         <a href="projectinfo.html 
         " class="bluetxt" style="text-decoration: none; color: white;"><span class="bluebtxt" >Project</span>
         <span class="bluebtxt" style="position: absolute;
@@ -343,49 +368,64 @@
         
         
         </div>
-        <div>
-            <span class="TM txt2">Team</span>
-            <div class="lineVerybg"></div>
-            <div class="profiles">
-              
-<div class="profile1" >
-                <div class="d-flex align-items-center lesswidth acc1" style="position: absolute;
-                left: 268px; background-color: #272b30; padding: 16px 32px; border-radius: 4px;">
-                    <div><img src="avatarbig.png" height="50px" style="margin-bottom: 10px;"></div>
-                    <div class="d-flex flex-column">
-                        <div class="guest1">raul</div>
-                        <div class="guest2" style="width: 155px;">Frontend Developer</div>
-                    </div>
-                </div>
-            </div>
-              <div class="d-flex align-items-center lesswidth acc2 profile2" style="background-color: #272b30;
-              padding: 21px 32px;
-              border-radius: 4px;
-              position: absolute;
-              left: -16px;">
-                    <div><img src="girl.png" height="50px"></div>
-                    <div class="d-flex flex-column">
-                        <div class="guest1">Laverne</div>
-                        <div class="guest2" style="width: 155px;">UI / UX Designer</div>
-                    </div>
-                </div>
-    
-        </div>
-    </div>
-
+<div id="overviewDiv">
     <div>
-        <span class="TM txt2" style="position: absolute; top: 953px;">Built With</span>
-        <div class="lineVerybg" style="position: absolute; top: 994px;"></div>
-        <div class="profiles5" style=" display: flex;
-        justify-content: flex-start;
-        gap: 10px;"> 
-          <div class="logo32 txt1" style="position: absolute; left: 0px;"><img src="JS.png" alt="" height="30px" style="padding-right: 10px;"> Javascript</div>
-          <div class="logo32 txt1" style="position: absolute; left: 150px;"><img src="react.png" alt="" height="30px"  style="padding-right: 10px;">React </div>
-          <div class="logo32 txt1" style="position: absolute; left: 300px;"><img src="figma.png" alt="" height="30px"  style="padding-right: 10px;">Figma</div>
-
+        <span class="TM txt2">Team</span>
+        <div class="lineVerybg"></div>
+        <div class="profiles">
+          
+<div class="profile1" >
+            <div class="d-flex align-items-center lesswidth acc1" style="position: absolute;
+            left: 268px; background-color: #272b30; padding: 16px 32px; border-radius: 4px;">
+                <div><img src="avatarbig.png" height="50px" style="margin-bottom: 10px;" id="avatarImg"></div>
+                <div class="d-flex flex-column">
+                    <div class="guest1">raul</div>
+                    <div class="guest2" style="width: 155px;">Frontend Developer</div>
+                </div>
+            </div>
+        </div>
+          <div class="d-flex align-items-center lesswidth acc2 profile2" style="background-color: #272b30;
+          padding: 21px 32px;
+          border-radius: 4px;
+          position: absolute;
+          left: -16px;">
+                <div><img src="girl.png" height="50px"></div>
+                <div class="d-flex flex-column">
+                    <div class="guest1">Laverne</div>
+                    <div class="guest2" style="width: 155px;">UI / UX Designer</div>
+                </div>
             </div>
 
     </div>
+</div>
+
+<div>
+    <span class="TM txt2" style="position: absolute; top: 953px;">Built With</span>
+    <div class="lineVerybg" style="position: absolute; top: 994px;"></div>
+    <div class="profiles5" style=" display: flex;
+    justify-content: flex-start;
+    gap: 10px;"> 
+      <div class="logo32 txt1" style="position: absolute; left: 0px;"><img src="JS.png" alt="" height="30px" style="padding-right: 10px;"> Javascript</div>
+      <div class="logo32 txt1" style="position: absolute; left: 150px;"><img src="react.png" alt="" height="30px"  style="padding-right: 10px;">React </div>
+      <div class="logo32 txt1" style="position: absolute; left: 300px;"><img src="figma.png" alt="" height="30px"  style="padding-right: 10px;">Figma</div>
+
+        </div>
+
+</div>
+
+
+</div>
+<div id="commentsDiv" style="display: none;">
+    <div style="position: absolute;
+    bottom: -29px;
+    left: -6px;">
+    <div class="profile22"><img src="mini-walter.jpg" alt="" height="50px" width="50px" style="border-radius: 50%; position: absolute;
+        bottom: -156px;
+        left: 1px;"></div>
+        <div class="commentTxt">The money, Skyler, where is the rest? Skyler? WHERE IS THE MONEY?!</div>
+        <div class="commentname" style="width: 92px;">Walter White</div>
+    </div>
+</div>
 </div>
 </div>
 
@@ -479,8 +519,33 @@
         }
     });
 </script>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    let overviewDiv = document.getElementById("overviewDiv");
+    let commentsDiv = document.getElementById("commentsDiv");
 
-   
+    let commentsButton = document.getElementById("commentsButton");
+    let overviewButton = document.getElementById("overviewButton");
+
+    commentsButton.addEventListener("click", function() {
+        overviewDiv.style.display = "none";
+        commentsDiv.style.display = "block";
+        commentsButton.style.fontWeight = "bold";
+        overviewButton.style.fontWeight = "normal";
+    });
+
+    overviewButton.addEventListener("click", function() {
+        overviewDiv.style.display = "block";
+        commentsDiv.style.display = "none";
+        overviewButton.style.fontWeight = "bold";
+        commentsButton.style.fontWeight = "normal";
+    });
+});
+</script>
+
+<script src="login2.js">
+ 
+</script>
 
 </body>
 </html>
